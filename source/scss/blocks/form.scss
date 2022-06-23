@@ -2,6 +2,7 @@
   position: relative;
   display: flex;
   align-items: center;
+  overflow: hidden;
 }
 
 .form__label {
@@ -43,6 +44,15 @@
   border: 0;
   border-radius: 3rem;
   outline: none;
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform 0.4s ease-out 0.3s;
+
+  .active & {
+    transform: scaleX(1);
+    transform-origin: right;
+    transition: transform 0.4s ease-out 0.3s;
+  }
 
   &:focus {
     border: 1px solid $c-purple;
@@ -80,6 +90,12 @@
 
 .form__button {
   flex-grow: 1;
+  color: rgba($c-dark, 0);
+  transition: color 0.3s ease-out 0.3s;
+
+  .active & {
+    color: rgba($c-dark, 1);
+  }
 
   @media (orientation: portrait) {
     position: relative;
