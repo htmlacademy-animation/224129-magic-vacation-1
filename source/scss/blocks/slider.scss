@@ -73,6 +73,36 @@
   font-size: 4.8rem;
   line-height: 0.906;
   letter-spacing: -0.04em;
+  transition: transform 0.3s ease;
+  overflow: hidden;
+
+  span {
+    display: inline-block;
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.3s ease-out, transform 0.3s ease-out;
+    &:nth-child(3),
+    &:last-child {
+      transition-delay: 0.05s;
+    }
+
+    &:nth-child(2),
+    &:nth-child(4),
+    &:nth-child(6) {
+      transition-delay: 0.1s;
+    }
+
+    &:first-child,
+    &:nth-child(5) {
+      transition-delay: 0.15s;
+    }
+  }
+
+  .swiper-slide-active & span {
+    opacity: 1;
+    transform: translateY(0);
+  }
+
 
   @media (min-width: $stop-scaling) {
     margin-left: -55px;
@@ -96,6 +126,21 @@
   max-width: 34rem;
   font-size: 1.8rem;
   line-height: 2rem;
+  opacity: 0;
+  transform: translateX(100%);
+  transition: opacity 0.3s ease-in, transform 0.3s ease-out;
+
+  .swiper-slide-active & {
+      opacity: 1;
+      transform: translateX(0);
+      transition-delay: 0.25s;
+  }
+
+  .swiper-slide-next & {
+    opacity: 1;
+    transform: translateX(0);
+    transition-delay: 0.35s;
+}
 
   @media (min-width: $stop-scaling) {
     margin-top: 36px;
@@ -155,6 +200,7 @@
   width: 4rem;
   height: 4rem;
   color: $c-dark;
+  transition: color 0.3s ease;
 
   @media (min-width: $stop-scaling) {
     width: 40px;
@@ -170,6 +216,7 @@
     border: 2px solid $c-light;
     border-radius: 50%;
     z-index: -1;
+    transition: width 0.3s ease, height 0.3s ease;
   }
 
   svg {
