@@ -40,7 +40,8 @@
     z-index: -1;
     transform: scale(0);
     transform-origin: center;
-    transition: width 0.3s ease, height 0.3s ease, transform 0.5s cubic-bezier(0.34, 1.56, 0.64, 1) 0.3s;
+    transition: width 0.3s ease, height 0.3s ease, transform 0.5s cubic-bezier(0.34, 1.56, 0.64, 1);
+    transition-delay: 0.25s;
 
     .js-page-load & {
       transform: scale(1);
