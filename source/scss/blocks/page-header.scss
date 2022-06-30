@@ -35,6 +35,15 @@
   padding: 1rem 0;
   width: 10rem;
   color: $c-light;
+  opacity: 0;
+  transform: translateX(-30px);
+  transition: opacity 0.3s ease, transform 0.3s ease-out;
+  transition-delay: 0.15s;
+
+  .js-page-load & {
+    opacity: 1;
+    transform: translateX(0);
+  }
 
   @media (min-width: $stop-scaling) {
     top: -5px;
@@ -130,6 +139,12 @@
 .page-header__nav {
   display: flex;
   align-items: center;
+  opacity: 0;
+  transition: opacity 0.3s ease 0.2s;
+
+  .js-page-load & {
+    opacity: 1;
+  }
 
   @media (max-width: $tablet) and (orientation: portrait) {
     position: fixed;
@@ -252,6 +267,16 @@
       background-color: $c-light;
       display: none;
       left: 0;
+      transform: scaleX(0);
+      transform-origin: right;
+
+      transition: transform 0.4s ease-in-out;
+
+      .js-page-load & {
+        transform: scaleX(1);
+        transform-origin: left;
+        transition: transform 0.4s ease 0.2s;
+      }
 
       @media (max-width: $tablet) and (orientation: portrait) {
         left: 0;
@@ -303,7 +328,7 @@
         background-color: $c-purple;
         transform: scaleX(1);
         transform-origin: left;
-        transition: transform 0.4s, background-color 0.4s;
+        transition: transform 0.4s ease, background-color 0.4s ease;
       }
     }
   }
