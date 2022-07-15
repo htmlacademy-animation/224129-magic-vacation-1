@@ -24,7 +24,7 @@ export default class FullPageScroll {
         let hash = evt.target.hash;
 
         if (window.location.hash === '#story' && menuElement.dataset.href === 'prizes') {
-          document.querySelector(`.screen.active`).classList.add('screen-overlay');
+          document.querySelector(`.screen.active`).classList.add(`screen-overlay`);
         }
 
         setTimeout(() => {
@@ -35,8 +35,6 @@ export default class FullPageScroll {
 
     this.onUrlHashChanged();
   }
-
-
 
   onScroll(evt) {
     if (this.scrollFlag) {
