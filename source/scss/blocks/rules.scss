@@ -155,10 +155,18 @@
     font-family: $font-alt;
     font-weight: 400;
     font-size: 2.4rem;
+    color: $c-purple;
     background-color: $c-purple;
     border-radius: 50%;
     line-height: 5rem;
     text-align: center;
+    transform: scale(0);
+    transition: transform 0.5s cubic-bezier(0.34, 1.56, 0.64, 1), color 0.3s ease 0.15s;
+
+    .active & {
+      transform: scale(1);
+      color: $c-light;
+    }
 
     @media (max-width: $tablet) and (orientation: portrait) {
       top: 1rem;
