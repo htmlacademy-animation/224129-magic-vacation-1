@@ -185,8 +185,28 @@
     }
   }
 
+  @for $i from 2 through 4 {
+    &:nth-child(#{$i}) {
+      &::before {
+        transition-delay: calc(#{$i}s / 10);
+      }
+
+      p {
+        transition-delay: calc(#{$i}s / 10);
+      }
+    }
+  }
+
   p {
     margin: 0;
+    opacity: 0;
+    transform: translateX(10px);
+    transition: opacity 0.3s ease-in, transform 0.3s ease-out;
+
+    .active & {
+      opacity: 1;
+      transform: translateX(0);
+    }
 
     @media (max-width: $tablet) and (orientation: portrait) {
       min-height: calc(1.4rem * 2.2);
