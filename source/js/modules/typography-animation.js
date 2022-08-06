@@ -1,4 +1,3 @@
-
 export default class AccentTypographyBuild {
   constructor(
     elementSelector,
@@ -22,8 +21,8 @@ export default class AccentTypographyBuild {
   createElement(letter) {
     const span = document.createElement(`span`);
     span.textContent = letter;
-    span.style.transition = `${this._property} ${this._timer}ms ease ${this._timeOffset}ms`;
-    this._timeOffset += 20;
+    // span.style.transition = `${this._property} ${this._timer}ms ease ${this._timeOffset}ms`;
+    // this._timeOffset += 20;
     return span;
   }
 
@@ -63,8 +62,8 @@ export default class AccentTypographyBuild {
   }
 }
 
-const animationTopScreenTextLine = new AccentTypographyBuild(`.intro__title`, 500, `active`, `transform`);
+const animationTextIntroTitle = new AccentTypographyBuild(`.intro__title`, 500, `active`, `transform`);
 
-setTimeout(()=> {
-  animationTopScreenTextLine.runAnimation();
+setTimeout(() => {
+  animationTextIntroTitle.runAnimation();
 }, 500);
