@@ -1,16 +1,12 @@
 export default class AccentTypographyBuild {
   constructor(
     elementSelector,
-    timer,
-    classForActivate,
-    property
+    classForActivate
   ) {
     this._TIME_SPACE = 100;
 
     this._elementSelector = elementSelector;
-    this._timer = timer;
     this._classForActivate = classForActivate;
-    this._property = property;
 
     this._element = document.querySelector(this._elementSelector);
     this._timeOffset = 0;
@@ -21,8 +17,6 @@ export default class AccentTypographyBuild {
   createElement(letter) {
     const span = document.createElement(`span`);
     span.textContent = letter;
-    // span.style.transition = `${this._property} ${this._timer}ms ease ${this._timeOffset}ms`;
-    // this._timeOffset += 20;
     return span;
   }
 
@@ -30,9 +24,12 @@ export default class AccentTypographyBuild {
     if (!this._element) {
       return;
     }
+
+    let regExp = /^\S+/;
     const text = this._element.textContent.trim().split(` `).filter((latter) => latter !== '');
-    const parentBlockClassName = this._element.parentNode.className;
+    const elementBlockClassName = this._element.className;
     const specialClassName = 'text-word';
+    const BEMClassName = elementBlockClassName.match(regExp);
 
     const content = text.reduce((fragmentParent, word) => {
       const wordElement = Array.from(word).reduce((fragment, latter) => {
@@ -40,7 +37,7 @@ export default class AccentTypographyBuild {
         return fragment;
       }, document.createDocumentFragment());
       const wordContainer = document.createElement(`span`);
-      wordContainer.classList.add(parentBlockClassName + '__word', specialClassName);
+      wordContainer.classList.add(BEMClassName + `-word`, specialClassName);
       wordContainer.appendChild(wordElement);
       fragmentParent.appendChild(wordContainer);
       return fragmentParent;
@@ -62,8 +59,18 @@ export default class AccentTypographyBuild {
   }
 }
 
-const animationTextIntroTitle = new AccentTypographyBuild(`.intro__title`, 500, `active`, `transform`);
+const animationTextIntroTitle = new AccentTypographyBuild(`.intro__title`, `active`);
+const animationTextIntroDate = new AccentTypographyBuild(`.intro__date`, `active`);
+const animationTextSliderTitle = new AccentTypographyBuild(`.slider__item-title`, `active`);
+const animationTextPrizesTitle = new AccentTypographyBuild(`.prizes__title`, `active`);
+const animationTextRulesTitle = new AccentTypographyBuild(`.rules__title`, `active`);
+const animationTextGamesTitle = new AccentTypographyBuild(`.game__title`, `active`);
 
 setTimeout(() => {
   animationTextIntroTitle.runAnimation();
+  animationTextIntroDate.runAnimation();
+  animationTextSliderTitle.runAnimation();
+  animationTextPrizesTitle.runAnimation();
+  animationTextRulesTitle.runAnimation();
+  animationTextGamesTitle.runAnimation();
 }, 500);

@@ -53,6 +53,21 @@
   }
 }
 
+.rules__title-word {
+  & > span {
+    display: inline-block;
+    transform: translate3d(0, 1.1em, 0);
+
+    &:nth-child(4n + 1) {
+      transition-delay: 0.2s;
+    }
+
+    &:nth-child(2n) {
+      transition-delay: 0.1s;
+    }
+  }
+}
+
 .rules__lead {
   margin-left: 5.8rem;
   max-width: 96rem;
