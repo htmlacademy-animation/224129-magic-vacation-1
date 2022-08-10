@@ -9,3 +9,15 @@
     opacity: 1;
   }
 }
+
+@keyframes a-suitecase-grow {
+  from {
+    transform: translate(-50%, 50%) scale(0.1);
+    opacity: 0;
+  }
+
+  to {
+    transform: translate(-50%, -50%) scale(1);
+    opacity: 1;
+  }
+}
