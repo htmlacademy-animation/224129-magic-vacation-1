@@ -54,17 +54,52 @@
     object-position: center;
   }
 
-  .result__picture--case {
-    width: 20vw;
+  .result__picture {
     height: auto;
-    transform: scale(0);
-    opacity: 0;
+  }
+
+  .result__picture--case {
+    width: 30vw;
+    z-index: 2;
   }
 
   .result__picture--flamingo {
     width: 20vw;
-    height: auto;
+    transform-origin: center;
+    z-index: 3;
+  }
+
+  .result__picture--lb2 {
+    transform-origin: right;
+  }
+
+  .result__picture--lg {
+    width: 30vw;
+  }
+
+  .result__picture--lb1,
+  .result__picture--lg {
+    transform-origin: left;
+  }
+
+  .result__picture--lb1,
+  .result__picture--lb2 {
+    width: 23vw;
+  }
+
+  .result__picture--lb1,
+  .result__picture--lb2,
+  .result__picture--lg {
     z-index: 1;
+  }
+
+  .result__picture--case,
+  .result__picture--flamingo,
+  .result__picture--lb1,
+  .result__picture--lb2,
+  .result__picture--lg {
+    transform: scale(0);
+    opacity: 0;
   }
 }
 
@@ -76,7 +111,38 @@
   animation-fill-mode: forwards;
 }
 
+.result__picture--flamingo {
+  animation: a-flamingo-appearance, a-flamingo-move;
+  animation-duration: 0.5s, 2.5s;
+  animation-timing-function: ease-out, ease-in-out;
+  animation-delay: 2.6s, 3.1s;
+  animation-fill-mode: forwards;
+  animation-iteration-count: 1, infinite;
+}
 
+.result__picture--lb1 {
+  animation-name: a-leaf-blue-first;
+  animation-duration: 1.5s;
+  animation-timing-function: ease-in-out;
+  animation-fill-mode: forwards;
+  animation-delay: 2.7s;
+}
+
+.result__picture--lb2 {
+  animation-name: a-leaf-blue-second;
+  animation-duration: 1.5s;
+  animation-timing-function: ease-in-out;
+  animation-fill-mode: forwards;
+  animation-delay: 2.8s;
+}
+
+.result__picture--lg {
+  animation-name: a-leaf-green-move;
+  animation-duration: 1.6s;
+  animation-timing-function: ease-out;
+  animation-fill-mode: forwards;
+  animation-delay: 3s;
+}
 
 .result__title {
   margin: 0 auto 2rem;
