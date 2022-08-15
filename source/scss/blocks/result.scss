@@ -59,14 +59,22 @@
   }
 
   .result__picture--case {
-    width: 30vw;
+    width: 20vw;
     z-index: 2;
+
+    @media (max-width: $tablet) {
+      width: 40vw;
+    }
   }
 
   .result__picture--flamingo {
-    width: 20vw;
+    width: 14vw;
     transform-origin: center;
     z-index: 3;
+
+    @media (max-width: $tablet) {
+      width: 30vw;
+    }
   }
 
   .result__picture--lb2 {
@@ -74,7 +82,11 @@
   }
 
   .result__picture--lg {
-    width: 30vw;
+    width: 20vw;
+
+    @media (max-width: $tablet) {
+      width: 40vw;
+    }
   }
 
   .result__picture--lb1,
@@ -84,7 +96,11 @@
 
   .result__picture--lb1,
   .result__picture--lb2 {
-    width: 23vw;
+    width: 15vw;
+
+    @media (max-width: $tablet) {
+      width: 30vw;
+    }
   }
 
   .result__picture--lb1,
@@ -147,6 +163,12 @@
 .result__title {
   margin: 0 auto 2rem;
   color: $c-light;
+  opacity: 0;
+  transform: scale(1.05);
+  animation-name: a-appearance-texts;
+  animation-duration: 0.5s;
+  animation-timing-function: ease-out;
+  animation-fill-mode: forwards;
 
   @media (min-width: $stop-scaling) {
     margin: 0 auto 20px;
@@ -173,6 +195,12 @@
   font-size: 4.8rem;
   line-height: 0.906;
   letter-spacing: -0.01em;
+  opacity: 0;
+  transform: scale(1.05);
+  animation-name: a-appearance-texts;
+  animation-duration: 0.5s;
+  animation-timing-function: ease-out;
+  animation-fill-mode: forwards;
 
   @media (min-width: $stop-scaling) {
     margin-bottom: 20px;
