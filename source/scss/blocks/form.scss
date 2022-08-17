@@ -144,6 +144,20 @@
 .form--result {
   .form__field {
     width: calc(100% - 31rem);
+    transform-origin: right;
+    animation-name: a-scale-x;
+    animation-duration: 0.3s;
+    animation-timing-function: ease-out;
+    animation-fill-mode: forwards;
+    animation-delay: 1s;
+
+    &::placeholder {
+      animation-name: a-text-color;
+      animation-duration: 0.3s;
+      animation-timing-function: ease-out;
+      animation-fill-mode: forwards;
+      animation-delay: 3s;
+    }
 
     @media (min-width: $stop-scaling) {
       width: calc(100% - 310px);
@@ -160,5 +174,19 @@
     @media (max-width: $mobile) and (orientation: landscape) {
       width: calc(100% - 5rem);
     }
+  }
+
+  .form__button {
+    color: $c-dark;
+  }
+
+  .btn::before {
+    transform: scale(1) translate(-50%, -50%);
+    opacity: 0;
+    animation-name: a-appearance;
+    animation-duration: 0.3s;
+    animation-timing-function: ease-out;
+    animation-fill-mode: forwards;
+    animation-delay: 1s;
   }
 }

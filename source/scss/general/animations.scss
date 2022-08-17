@@ -10,10 +10,37 @@
   }
 }
 
-@keyframes a-appearance-texts {
+@keyframes a-scale-x {
+  to {
+    transform: scaleX(1);
+  }
+}
+
+@keyframes a-text-color {
+  0% {
+    color: rgba(95, 69, 140, 0);
+  }
+
+  100% {
+    color: rgba(95, 69, 140, 1);
+  }
+}
+
+@keyframes a-texts-appearance {
   to {
     opacity: 1;
     transform: scale(1);
+  }
+}
+
+@keyframes a-svg-text-appearance {
+  0% {
+    stroke-dashoffset: 800;
+  }
+
+  100% {
+    stroke-dashoffset: 1;
+    opacity: 1;
   }
 }
 
