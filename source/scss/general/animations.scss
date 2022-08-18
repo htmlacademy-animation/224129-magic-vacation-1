@@ -10,19 +10,15 @@
   }
 }
 
-@keyframes a-scale-x {
+@keyframes a-appearance-reverse {
   to {
-    transform: scaleX(1);
+    opacity: 0;
   }
 }
 
-@keyframes a-text-color {
-  0% {
-    color: rgba(95, 69, 140, 0);
-  }
-
-  100% {
-    color: rgba(95, 69, 140, 1);
+@keyframes a-scale-x {
+  to {
+    transform: scaleX(1);
   }
 }
 
