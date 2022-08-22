@@ -178,3 +178,27 @@
     opacity: 1;
   }
 }
+
+@keyframes a-control-prev {
+  0% {
+    transform: translateX(-100px) rotate(-90deg);
+    opacity: 0;
+  }
+
+  100% {
+    transform: translateX(0px) rotate(0deg);
+    opacity: 1;
+  }
+}
+
+@keyframes a-control-next {
+  0% {
+    transform: translateX(100px) rotate(90deg);
+    opacity: 0;
+  }
+
+  100% {
+    transform: translateX(0px) rotate(0deg);
+    opacity: 1;
+  }
+}

@@ -321,6 +321,33 @@
   background-size: cover;
   background-position: center;
 
+  &.active {
+
+    .js-control-prev {
+      animation-name: a-control-prev;
+      animation-duration: 0.4s;
+      animation-timing-function: cubic-bezier(0, 0.67, 0.47, 1);
+      animation-fill-mode: forwards;
+      animation-delay: 0.3s;
+    }
+
+    .js-control-next {
+      animation-name: a-control-next;
+      animation-duration: 0.4s;
+      animation-timing-function: cubic-bezier(0, 0.67, 0.47, 1);
+      animation-fill-mode: forwards;
+      animation-delay: 0.3s;
+    }
+
+    .slider__pagination.swiper-pagination {
+      animation-name: a-appearance;
+      animation-duration: 0.2s;
+      animation-timing-function: ease;
+      animation-fill-mode: forwards;
+      animation-delay: 0.4s;
+    }
+  }
+
   @media (orientation: portrait) {
     background-size: auto calc(100vh - 13.8rem), 100% 25rem;
     background-position: top center, bottom center;
