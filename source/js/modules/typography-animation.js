@@ -74,3 +74,12 @@ setTimeout(() => {
   animationTextRulesTitle.runAnimation();
   animationTextGamesTitle.runAnimation();
 }, 500);
+
+setTimeout(() => {
+  animationTextIntroTitle.destroyAnimation();
+  animationTextIntroDate.destroyAnimation();
+  animationTextSliderTitle.destroyAnimation();
+  animationTextPrizesTitle.destroyAnimation();
+  animationTextRulesTitle.destroyAnimation();
+  animationTextGamesTitle.destroyAnimation();
+}, 1000);

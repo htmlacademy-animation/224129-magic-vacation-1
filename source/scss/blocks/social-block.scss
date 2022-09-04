@@ -19,6 +19,12 @@
   border-radius: 50%;
   transition: color 0.3s ease;
 
+  @each $theme, $color in $themes {
+    .js-page-load.theme-#{"" + $theme} & {
+      color: $color;
+    }
+  }
+
   @media (max-width: $tablet) and (orientation: portrait) {
     display: none;
   }
@@ -73,6 +79,12 @@
 
     &::before {
       border-color: $c-purple;
+
+      @each $theme, $color in $themes {
+        .js-page-load.theme-#{"" + $theme} & {
+          border-color: $color;
+        }
+      }
     }
 
     & + .social-block__list {
@@ -83,13 +95,20 @@
 
   &:active,
   &:active:focus {
-    color: $c-light;
+    @each $theme, $color in $themes {
+      .js-page-load.theme-#{"" + $theme} & {
+        color: $color;
+      }
+    }
 
     &::before {
       width: 100%;
       height: 100%;
-      background-color: $c-purple;
-      border-color: $c-purple;
+      @each $theme, $color in $themes {
+        .js-page-load.theme-#{"" + $theme} & {
+          border-color: $color;
+        }
+      }
     }
   }
 }
@@ -218,21 +237,37 @@
   }
 
   &:hover {
-    color: $c-purple;
+    color: $c-dark;
+
+    @each $theme, $color in $themes {
+      .js-page-load.theme-#{"" + $theme} & {
+        color: $color;
+      }
+    }
   }
 
   &:focus {
-    color: $c-purple;
+    // color: $c-purple;
     background-color: $c-light;
-    border-color: $c-purple;
+    // border-color: $c-purple;
     outline: none;
+    @each $theme, $color in $themes {
+      .js-page-load.theme-#{"" + $theme} & {
+        color: $color;
+      }
+    }
   }
 
   &:active,
   &:active:focus {
-    color: $c-purple;
-    background-color: $c-light;
-    border-color: $c-light;
+    // color: $c-purple;
+    // background-color: $c-light;
+    // border-color: $c-light;
+    @each $theme, $color in $themes {
+      .js-page-load.theme-#{"" + $theme} & {
+        color: $color;
+      }
+    }
   }
 
   svg {

@@ -1,6 +1,9 @@
 $c-light: #ffffff;
 $c-dark: #5f458c;
 $c-purple: #a67ee5;
+$c-blue: #2A34B0;
+$c-lightblue: #5183C4;
+$c-darkpurple: #2F2A42;
 
 $font: "Proxima Nova", "Arial", sans-serif;
 $font-alt: "Radical",  "Arial", sans-serif;
@@ -17,5 +20,11 @@ $mobile: 768px;
 
 $retina-dpi: 144dpi;
 $retina-dppx: 1.5dppx;
+
+$themes: (
+  blue: $c-blue,
+  lightblue: $c-lightblue,
+  darkpurple: $c-darkpurple
+);
 
 $index: 1.38871;
