@@ -1,7 +1,5 @@
 import Swiper from "swiper";
-import {removeBodyThemeClasess} from './utils';
-
-console.log(removeBodyThemeClasess());
+import {sliderContainer, removeBodyThemeClasess} from './utils';
 
 export default () => {
   let storySlider;
@@ -54,6 +52,8 @@ export default () => {
         },
         on: {
           slideChange: () => {
+            localStorage.setItem('sliderActiveIndex', storySlider.activeIndex);
+
             if (storySlider.activeIndex === 0) {
               sliderContainer.style.backgroundImage = `url("img/slide1.jpg")`;
               removeBodyThemeClasess();
@@ -70,6 +70,7 @@ export default () => {
               removeBodyThemeClasess();
               document.body.classList.add('theme-darkpurple');
             }
+
           },
           resize: () => {
             storySlider.update();
@@ -84,6 +85,8 @@ export default () => {
   window.addEventListener(`resize`, function () {
     if (storySlider) {
       storySlider.destroy();
+      localStorage.clear();
+      removeBodyThemeClasess();
     }
     setSlider();
   });

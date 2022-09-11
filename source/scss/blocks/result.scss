@@ -163,12 +163,21 @@
 .result__title {
   margin: 0 auto 2rem;
   color: $c-light;
-  opacity: 0;
-  transform: scale(1.05);
-  animation-name: a-texts-appearance;
-  animation-duration: 0.3s;
-  animation-timing-function: ease-out;
-  animation-fill-mode: forwards;
+
+  &-svg {
+    @media (min-width: $small-mobile) and (max-width: $tablet) {
+      margin-top: 20vh;
+    }
+  }
+
+  #result2 & {
+    opacity: 0;
+    transform: scale(1.05);
+    animation-name: a-texts-appearance;
+    animation-duration: 0.3s;
+    animation-timing-function: ease-out;
+    animation-fill-mode: forwards;
+  }
 
   @media (min-width: $stop-scaling) {
     margin: 0 auto 20px;
@@ -184,12 +193,31 @@
     height: 100%;
     stroke-width: 0.2rem;
     stroke-linejoin: round;
-    stroke-dasharray: 800;
-    stroke-dashoffset: 0;
-    animation-name: a-svg-text-appearance;
-    animation-duration: 1s;
-    animation-timing-function: ease-out;
-    animation-fill-mode: forwards;
+
+    #result2 &,
+    #result3 & {
+      stroke-dasharray: 800;
+      stroke-dashoffset: 0;
+      animation-name: a-svg-text-appearance;
+      animation-duration: 1s;
+      animation-timing-function: ease-out;
+      animation-fill-mode: forwards;
+    }
+
+    #result3 & {
+      height: 220px;
+      transform: translateY(-100px);
+
+      path {
+        transform: translateY(0);
+
+        @for $i from 2 through $letter-text-count {
+          &:nth-child(#{$i}) {
+            animation-delay: $i * (1s / 10);
+          }
+        }
+      }
+    }
   }
 }
 
@@ -239,6 +267,7 @@
   font-size: 2.4rem;
   line-height: 1.2;
   color: $c-light;
+  opacity: 0;
 
   @media (min-width: $stop-scaling) {
     margin: auto auto 10px;

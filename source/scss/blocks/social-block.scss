@@ -237,7 +237,7 @@
   }
 
   &:hover {
-    color: $c-dark;
+    color: $c-purple;
 
     @each $theme, $color in $themes {
       .js-page-load.theme-#{"" + $theme} & {
