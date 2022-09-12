@@ -1,4 +1,5 @@
 import Swiper from "swiper";
+import {sliderContainer, removeBodyThemeClasess} from './utils';
 
 export default () => {
   let storySlider;
@@ -51,15 +52,25 @@ export default () => {
         },
         on: {
           slideChange: () => {
+            localStorage.setItem('sliderActiveIndex', storySlider.activeIndex);
+
             if (storySlider.activeIndex === 0) {
               sliderContainer.style.backgroundImage = `url("img/slide1.jpg")`;
+              removeBodyThemeClasess();
             } else if (storySlider.activeIndex === 2) {
               sliderContainer.style.backgroundImage = `url("img/slide2.jpg")`;
+              removeBodyThemeClasess();
+              document.body.classList.add('theme-blue');
             } else if (storySlider.activeIndex === 4) {
               sliderContainer.style.backgroundImage = `url("img/slide3.jpg")`;
+              removeBodyThemeClasess();
+              document.body.classList.add('theme-lightblue');
             } else if (storySlider.activeIndex === 6) {
               sliderContainer.style.backgroundImage = `url("img/slide4.jpg")`;
+              removeBodyThemeClasess();
+              document.body.classList.add('theme-darkpurple');
             }
+
           },
           resize: () => {
             storySlider.update();
@@ -74,6 +85,8 @@ export default () => {
   window.addEventListener(`resize`, function () {
     if (storySlider) {
       storySlider.destroy();
+      localStorage.clear();
+      removeBodyThemeClasess();
     }
     setSlider();
   });

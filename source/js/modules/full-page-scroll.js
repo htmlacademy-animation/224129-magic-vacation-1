@@ -1,5 +1,5 @@
 import throttle from 'lodash/throttle';
-
+import {pageBody, removeBodyThemeClasess} from './utils';
 export default class FullPageScroll {
   constructor() {
     this.THROTTLE_TIMEOUT = 1000;
@@ -25,6 +25,26 @@ export default class FullPageScroll {
 
         if (window.location.hash === '#story' && menuElement.dataset.href === 'prizes') {
           document.querySelector(`.screen.active`).classList.add(`screen-overlay`);
+        }
+
+        if (menuElement.dataset.href !== 'story') {
+          removeBodyThemeClasess();
+        } else {
+
+          switch(localStorage.sliderActiveIndex) {
+            case '2':
+              pageBody.classList.add('theme-blue');
+              break;
+
+            case '4':
+              pageBody.classList.add('theme-lightblue');
+              break;
+
+            case '6':
+              pageBody.classList.add('theme-darkpurple');
+              break;
+          }
+
         }
 
         setTimeout(() => {

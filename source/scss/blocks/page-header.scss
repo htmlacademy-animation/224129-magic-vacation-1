@@ -1,3 +1,5 @@
+@use "sass:color";
+
 .page-header {
   position: fixed;
   top: 0;
@@ -120,6 +122,7 @@
   }
 
   .page-header--menu-opened & {
+
     &::before,
     &::after {
       top: 50%;
@@ -249,6 +252,15 @@
         margin-bottom: 0;
       }
     }
+
+    @media (min-width: $tablet) { // Фикс. На десктопе последние два пункта меню при ховере сливаются с фоном.
+      &:nth-last-child(-n + 2) a {
+        &:hover,
+        &:focus {
+          color: lighten($c-purple, 10);
+        }
+      }
+    }
   }
 
   a {
@@ -319,16 +331,36 @@
       color: $c-purple;
       outline: none;
 
+      @each $theme,
+      $color in $themes {
+        .js-page-load.theme-#{"" + $theme} & {
+          color: $color;
+        }
+      }
+
       &::after {
         opacity: 1;
         background-color: $c-purple;
+
+        @each $theme,
+        $color in $themes {
+          .js-page-load.theme-#{"" + $theme} & {
+            background-color: $color;
+          }
+        }
       }
 
       &::before {
-        background-color: $c-purple;
         transform: scaleX(1);
         transform-origin: left;
         transition: transform 0.4s ease, background-color 0.4s ease;
+
+        @each $theme,
+        $color in $themes {
+          .js-page-load.theme-#{"" + $theme} & {
+            background-color: $color;
+          }
+        }
       }
     }
   }
