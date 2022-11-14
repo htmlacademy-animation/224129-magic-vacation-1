@@ -27,6 +27,10 @@ export default class FullPageScroll {
           document.querySelector(`.screen.active`).classList.add(`screen-overlay`);
         }
 
+        if (menuElement.dataset.href === 'prizes' && window.location.hash !== hash) {
+          document.querySelector('#appearance').beginElement();
+        }
+
         if (menuElement.dataset.href !== 'story') {
           removeBodyThemeClasess();
         } else {

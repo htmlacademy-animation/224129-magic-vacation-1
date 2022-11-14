@@ -6,5 +6,9 @@ export default ()=> {
 
   window.addEventListener('load', ()=> {
     pageBody.classList.add(pageLoadClass);
+
+    if (document.URL.indexOf('prizes') !== -1) {
+      document.querySelector('#appearance').beginElement();
+    }
   });
 };
