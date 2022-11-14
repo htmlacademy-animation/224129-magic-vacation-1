@@ -73,6 +73,14 @@
   text-transform: uppercase;
   font-size: 2.4rem;
   line-height: 1.2;
+  transform: translateY(20px);
+  opacity: 0;
+  transition: opacity 0.3s ease-out 0.4s, transform 0.3s ease-out 0.4s;
+
+  .active & {
+    transform: translateY(0);
+    opacity: 1;
+  }
 
   @media (min-width: $stop-scaling) {
     margin-left: 58px;
@@ -147,6 +155,8 @@
       left: -5.9rem;
       bottom: -1.4rem;
       width: 26.8rem;
+      transform: translateX(30rem);
+      transition: transform 0.3s ease-out;
 
       @media (min-width: $stop-scaling) {
         left: -59px;
@@ -250,6 +260,7 @@
   margin: 5.6rem 0 0 0;
   font-size: 1.8rem;
   line-height: 1.1;
+  opacity: 0;
 
   @media (min-width: $stop-scaling) {
     margin-top: 56px;
