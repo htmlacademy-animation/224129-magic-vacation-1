@@ -1,0 +1,45 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 350 330">
+  <g id="suitcase">
+    <g id="wheel-right">
+      <path id="wheel-right-fill" d="M251.9 328.9c1.9 0 3.5-1.6 3.5-3.5v-5.1c0-1.9-1.6-3.5-3.5-3.5s-3.5 1.6-3.5 3.5v5.1c0 1.9 1.5 3.5 3.5 3.5" fill="#A67EE5" />
+      <path id="wheel-right-outline" d="M251.9 328.9c1.9 0 3.5-1.6 3.5-3.5v-5.1c0-1.9-1.6-3.5-3.5-3.5s-3.5 1.6-3.5 3.5v5.1c0 1.9 1.5 3.5 3.5 3.5z" fill="none" stroke="#FFFFFF" stroke-width="2" stroke-miterlimit="10" />
+    </g>
+    <g id="wheel-left">
+      <path id="wheel-left-fill" d="M176.4 328.9c1.9 0 3.5-1.6 3.5-3.5v-5.1c0-1.9-1.6-3.5-3.5-3.5s-3.5 1.6-3.5 3.5v5.1c-.1 1.9 1.5 3.5 3.5 3.5" fill="#A67EE5" />
+      <path id="wheel-left-outline" d="M176.4 328.9c1.9 0 3.5-1.6 3.5-3.5v-5.1c0-1.9-1.6-3.5-3.5-3.5s-3.5 1.6-3.5 3.5v5.1c-.1 1.9 1.5 3.5 3.5 3.5z" fill="none" stroke="#FFFFFF" stroke-width="2" stroke-miterlimit="10" />
+    </g>
+    <g id="suitecase-rearward">
+      <path id="suitecase-rearward-fill" d="M170.9 320.3h74.5c6.3 0 11.3-5.1 11.3-11.4v-66.1c0-6.3-5.1-11.3-11.4-11.4h-74.5c-6.3 0-11.3 5.1-11.4 11.4v66.1c.2 6.3 5.3 11.4 11.5 11.4" fill="#A67EE5" />
+      <path id="suitecase-rearward-outline" d="M170.9 231.5h74.5c6.3 0 11.4 5.1 11.4 11.4V309c0 6.3-5.1 11.4-11.4 11.4h-74.5c-6.3 0-11.4-5.1-11.4-11.4v-66.1c.1-6.3 5.2-11.4 11.4-11.4z" fill="none" stroke="#FFFFFF" stroke-width="2" stroke-miterlimit="10" />
+    </g>
+    <g id="suitcase-handle-top">
+      <path id="suitcase-handle-top-fill" d="M199.3 219.1h32.4c2.3 0 4.1 1.8 4.1 4.1v16c0 .7-.5 1.2-1.2 1.2h-2.7c-.7 0-1.2-.5-1.2-1.2v-14.4c0-.7-.6-1.3-1.3-1.3h-27.9c-.7 0-1.3.6-1.3 1.3v14.4c0 .7-.5 1.2-1.2 1.2h-2.7c-.7 0-1.2-.5-1.2-1.2v-16c.1-2.2 1.9-4 4.2-4.1" fill="#A67EE5" />
+      <path id="suitcase-handle-top-outline" d="M199.3 219.1h32.4c2.3 0 4.1 1.8 4.1 4.1v16c0 .7-.5 1.2-1.2 1.2h-2.7c-.7 0-1.2-.5-1.2-1.2v-14.4c0-.7-.6-1.3-1.3-1.3h-27.9c-.7 0-1.3.6-1.3 1.3v14.4c0 .7-.5 1.2-1.2 1.2h-2.7c-.7 0-1.2-.5-1.2-1.2v-16c.1-2.2 1.9-4 4.2-4.1z" fill="none" stroke="#FFFFFF" stroke-width="2" stroke-miterlimit="10" />
+    </g>
+    <g id="suitcase-forward-panel">
+      <path id="suitcase-forward-panel-fill" d="M185.3 320.3h74.5c6.3 0 11.3-5.1 11.4-11.4v-66.1c0-6.3-5.1-11.3-11.4-11.4h-74.5c-6.3 0-11.3 5.1-11.3 11.4v66.1c0 6.3 5.1 11.4 11.3 11.4" fill="#A67EE5" />
+      <path id="suitcase-forward-panel-outline" d="M185.3 320.3h74.5c6.3 0 11.3-5.1 11.4-11.4v-66.1c0-6.3-5.1-11.3-11.4-11.4h-74.5c-6.3 0-11.3 5.1-11.3 11.4v66.1c0 6.3 5.1 11.4 11.3 11.4z" fill="none" stroke="#FFFFFF" stroke-width="2" stroke-miterlimit="10" />
+      <line id="suitcase-forward-panel-top-line" x1="254.2" y1="252.4" x2="191" y2="252.4" fill="none" stroke="#FFFFFF" stroke-width="2" stroke-linecap="round" stroke-miterlimit="10" />
+      <line id="suitcase-forward-panel-middle-line" x1="254.2" y1="275.9" x2="191" y2="275.9" fill="none" stroke="#FFFFFF" stroke-width="2" stroke-linecap="round" stroke-miterlimit="10" />
+      <line id="suitcase-forward-panel-bottom-line" x1="254.2" y1="299.4" x2="191" y2="299.4" fill="none" stroke="#FFFFFF" stroke-width="2" stroke-linecap="round" stroke-miterlimit="10" />
+    </g>
+    <g id="suitcase-handle-left">
+      <path id="suitcase-handle-left-fill" d="M168.1 253.7h.7v44.5h-.7c-1.9 0-3.5-1.6-3.5-3.5v-37.4c0-2 1.6-3.6 3.5-3.6" fill="#A67EE5" />
+      <path id="suitcase-handle-left-outline" d="M168.1 253.7h.7v44.5h-.7c-1.9 0-3.5-1.6-3.5-3.5v-37.4c0-2 1.6-3.6 3.5-3.6z" fill="none" stroke="#FFFFFF" stroke-width="2" stroke-miterlimit="10" />
+    </g>
+  </g>
+  <g id="parachute">
+    <g id="parachute-sling">
+      <line id="sling-left" x1="215.5" y1="218.9" x2="159.9" y2="139" fill="none" stroke="#FFFFFF" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+      <line id="sling-middle-left" x1="215.5" y1="218.9" x2="196.9" y2="139" fill="none" stroke="#FFFFFF" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+      <line id="sling-middle-right" x1="234" y1="139" x2="215.5" y2="218.9" fill="none" stroke="#FFFFFF" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+      <line id="sling-right" x1="271" y1="139" x2="215.5" y2="218.9" fill="none" stroke="#FFFFFF" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+    </g>
+    <g id="parachute-dome">
+      <path id="parachute-outline" d="M215.5 83.4c30.7 0 55.5 24.9 55.5 55.6 0-6.8-8.3-12.2-18.5-12.2s-18.3 5.4-18.5 12v.3c0-6.8-8.3-12.2-18.5-12.2s-18.5 5.5-18.5 12.2v-.3c-.2-6.6-8.4-12-18.5-12S160 132.3 160 139c-.2-30.7 24.7-55.6 55.5-55.6-.1 0-.1 0 0 0m-.1-1.6c-31.6.1-57.2 25.7-57.2 57.2 0 .9.7 1.7 1.7 1.7s1.7-.7 1.7-1.7c0-5.8 7.6-10.6 16.9-10.6 9.1 0 16.7 4.7 16.9 10.4v.2c0 .9.7 1.7 1.7 1.7s1.7-.7 1.7-1.7c0-5.8 7.6-10.6 16.9-10.6s16.9 4.8 16.9 10.6c0 .9.7 1.7 1.7 1.7s1.7-.7 1.7-1.7v-.2c.2-5.7 7.7-10.4 16.9-10.4 9.3 0 16.9 4.8 16.9 10.6 0 .9.7 1.7 1.7 1.7s1.7-.7 1.7-1.7c-.5-31.6-26.1-57.2-57.8-57.2" fill="#FFFFFF" />
+      <path id="parachute-section-right" d="M215.5 83.4c9.9 0 18 20.9 18.5 55.3.2-6.6 8.4-12 18.5-12S271 132.3 271 139c0-30.7-24.9-55.6-55.5-55.6" fill="#E81A5A" />
+      <path id="parachute-section-left" d="M215.4 83.4c-30.7 0-55.6 24.9-55.6 55.6 0-6.8 8.3-12.2 18.5-12.2s18.3 5.4 18.5 12c.6-34.5 8.7-55.4 18.6-55.4" fill="#FE6183" />
+      <path id="parachute-section-middle" d="M215.5 83.4c-9.9 0-18 20.9-18.5 55.3v.3c0-6.8 8.3-12.2 18.5-12.2S234 132.3 234 139v-.3c-.5-34.4-8.6-55.3-18.5-55.3" fill="#F7396B" />
+    </g>
+  </g>
+</svg>
