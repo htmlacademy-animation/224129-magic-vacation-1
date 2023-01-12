@@ -232,3 +232,36 @@
     opacity: 1;
   }
 }
+
+@keyframes a-award-to-rotate {
+  to {
+    transform: translate(20px, -250px) rotate(40deg) scale3d(0.3, 0.3, 0.3);
+  }
+}
+
+@keyframes a-crooked-motion {
+  10% {
+    transition-timing-function: ease-in-out;
+    transform: translate(-10px, -255px) rotate(-20deg) scale3d(0.31, 0.31, 0.31);
+  }
+
+  20% {
+    transition-timing-function: linear;
+    transform: translate(-120px, -220px) rotate(-20deg) scale3d(0.35, 0.35, 0.35);
+  }
+
+  40% {
+    transition-timing-function: linear;
+    transform: translate(-120px, -200px) rotate(20deg) scale3d(0.5, 0.5, 0.5);
+  }
+
+  80% {
+    transition-timing-function: ease-out;
+    transform: translate(0, -50px) rotate(-10deg) scale3d(0.9, 0.9, 0.9);
+  }
+
+  100% {
+    transition-timing-function: ease-in;
+    transform: translate(0, 0) rotate(0) scale3d(1, 1, 1);
+  }
+}
