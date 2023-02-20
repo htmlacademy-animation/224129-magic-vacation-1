@@ -1002,21 +1002,115 @@
                       <path fill="none" stroke="#FFFFFF" stroke-width="2" stroke-miterlimit="10" d="M240.3 210.48H67.19c-6.589 0-11.945 5.312-12 11.9V276c0 7.18 5.82 13 13 13h184v-66.62c-.054-6.546-5.344-11.84-11.89-11.9z"/>
                       <path fill="none" stroke="#FFFFFF" stroke-width="2" d="M70.24 289v-63.51c0-8.284 6.716-15 15-15h.5"/>
                     </g>
-                    <g id="flowers" opacity="0">
+                    <g id="flowers">
                       <path fill="none" stroke="#FFFFFF" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" d="M180.73 277.8s8.3-74.59 39.71-90"/>
                       <path fill="#3B7BF2" d="m217.95 187.12 9.27-24.49a22 22 0 0 1 8.72 3 7.87 7.87 0 0 1 9.72 12.33 22.132 22.132 0 0 1 .86 9.18l-26 3.3a2.449 2.449 0 0 1-2.6-3.29"/>
                       <path fill="none" stroke="#FFFFFF" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" d="M178.24 287.63s6.89-44.68 37.95-56.53"/>
                       <path fill="#3B7BF2" d="m210.85 232 9-16.47a16.659 16.659 0 0 1 6.13 2.93 5.93 5.93 0 0 1 4-.42 5.67 5.67 0 0 1 4.275 6.784l-.015.066a5.54 5.54 0 0 1-2.29 3.23 15.098 15.098 0 0 1-.21 6.58l-19.34-.11a1.759 1.759 0 0 1-1.6-2.58"/>
+                      <animateTransform
+                        attributeName="transform"
+                        type="translate"
+                        values="0 6; 0 0"
+                        keySplines="0.42, 0.0, 0.58, 1.0; 0.42, 0.0, 0.58, 1.0;"
+                        keyTimes="0; 1"
+                        dur="1s"
+                        fill="freeze"
+                        begin="secondAppearance.begin"/>
+                      <animateTransform
+                        attributeName="transform"
+                        type="rotate"
+                        values="65 190 290; -7 190 290; 7 190 290; -5 190 290; 0 190 290; 3 190 290; 0 190 290;"
+                        keySplines="0.42, 0.0, 0.58, 1.0; 0.42, 0.0, 0.58, 1.0; 0.42, 0.0, 0.58, 1.0; 0.42, 0.0, 0.58, 1.0; 0.42, 0.0, 0.58, 1.0; 0.42, 0.0, 0.58, 1.0; 0.42, 0.0, 0.58, 1.0;"
+                        keyTimes="0; 0.25; 0.4; 0.55; 0.7; 0.85; 1"
+                        dur="1.5s"
+                        fill="freeze"
+                        additive="sum"
+                        begin="secondAppearance.begin"
+                      />
                     </g>
-                    <g id="baloon" opacity="0">
+                    <line id="baloon-string" opacity="0" fill="none" stroke="#FFFFFF" stroke-width="2" stroke-linecap="round" stroke-miterlimit="10" x1="107.65" y1="166.71" x2="107.65" y2="289.02" transform-origin="107 289">
+                      <animateTransform
+                        id="lineScale"
+                        attributeName="transform"
+                        type="scale"
+                        from="1, 0" to="1, 1.1"
+                        keySplines="0.42, 0.0, 0.58, 1.0; 0.42, 0.0, 0.58, 1.0;"
+                        keyTimes="0; 1"
+                        dur="0.4s"
+                        additive="sum"
+                        fill="freeze"
+                        begin="secondAppearance.begin + 0.1s"
+                      />
+                      <set
+                        attributeName="opacity"
+                        to="1"
+                        begin="secondAppearance.begin + 0.1s"
+                      />
+                      <animateTransform
+                        attributeName="transform"
+                        type="rotate"
+                        values="0; 5; -3; 0; 0"
+                        keySplines="0.42, 0.0, 0.58, 1.0; 0.42, 0.0, 0.58, 1.0; 0.42, 0.0, 0.58, 1.0; 0.42, 0.0, 0.58, 1.0;0.42, 0.0, 0.58, 1.0;"
+                        keyTimes="0; 0.25; 0.5; 0.75; 1"
+                        dur="1s"
+                        additive="sum"
+                        fill="freeze"
+                        begin="balloonRotate.end"
+                      />
+                    </line>
+                    <g id="baloon">
                       <path fill="#FFFFFF" d="m106.58 161.87-2.19 3.79a1.34 1.34 0 0 0 1.17 2h4.37a1.34 1.34 0 0 0 1.16-2l-2.18-3.79a1.35 1.35 0 0 0-2.33 0"/>
                       <path fill="#FFFFFF" d="M107.74 79.42c18.164.006 32.889 14.726 32.9 32.89 0 18.17-15.09 48.89-33.25 48.89s-32.55-30.73-32.55-48.89c.011-18.164 14.736-32.884 32.9-32.89m0-1.61c-19.045.022-34.478 15.455-34.5 34.5 0 9.51 3.8 22.1 9.68 32.07 7 11.88 15.68 18.42 24.46 18.42s17.6-6.54 24.81-18.4c6.1-10 10.05-22.64 10.05-32.09-.022-19.045-15.455-34.478-34.5-34.5"/>
                       <path fill="#76ABFF" d="M96.06 112.39c0-18.16 5.23-32.89 11.68-32.89-18.164.006-32.889 14.726-32.9 32.89 0 18.17 14.38 48.89 32.55 48.89h.17c-6.43-.19-11.5-30.77-11.5-48.89"/>
                       <path fill="#1553B7" d="M140.64 112.39c-.011-18.164-14.736-32.884-32.9-32.89 6.45 0 11.68 14.73 11.68 32.89s-5.29 48.48-11.68 48.87c18-.39 32.9-30.82 32.9-48.87"/>
                       <path fill="#3B7BF2" d="M119.42 112.39c0-18.16-5.23-32.89-11.68-32.89s-11.68 14.73-11.68 32.89 5.07 48.69 11.5 48.89h.18c6.39-.4 11.68-30.83 11.68-48.88"/>
                       <path fill="#FFFFFF" d="M100.54 105.36a5.7 5.7 0 1 0 5.7 5.7 5.39 5.39 0 0 0-5.7-5.7m0 8c-1.86 0-3.06-.93-3.06-2.29s1.21-2.29 3.06-2.29 3.07.93 3.07 2.29-1.25 2.29-3.07 2.29M114.74 105.36a1.78 1.78 0 0 1 1.46 2.8l-13.33 19.34a1.79 1.79 0 0 1-2.94-2l13.34-19.34a1.77 1.77 0 0 1 1.47-.77M116.21 116.88a5.7 5.7 0 1 0 5.7 5.7 5.4 5.4 0 0 0-5.7-5.7m0 8c-1.86 0-3.06-.93-3.06-2.29s1.21-2.29 3.06-2.29 3.07.9 3.07 2.29-1.21 2.29-3.07 2.29"/>
+                      <animateTransform
+                        id="balloonTranslate"
+                        attributeName="transform"
+                        type="translate"
+                        values="0 208; 0 0"
+                        keyTimes="0; 1"
+                        dur="0.5s"
+                        fill="freeze"
+                        additive="sum"
+                        begin="secondAppearance.begin"
+                      />
+                      <animateTransform
+                        id="balloonRotate"
+                        attributeName="transform"
+                        type="rotate"
+                        values="45 108 164; 10 108 164;"
+                        keySplines="0.42, 0.0, 0.58, 1.0; 0.42, 0.0, 0.58, 1.0;"
+                        keyTimes="0;1"
+                        dur="0.5s"
+                        additive="sum"
+                        fill="freeze"
+                        begin="secondAppearance.begin"
+                      />
+                      <animateTransform
+                        attributeName="transform"
+                        type="translate"
+                        values="0 0; 10 10; -5 0; 0 5; 0 0;"
+                        keySplines="0.42, 0.0, 0.58, 1.0; 0.42, 0.0, 0.58, 1.0; 0.42, 0.0, 0.58, 1.0; 0.42, 0.0, 0.58, 1.0; 0.42, 0.0, 0.58, 1.0;"
+                        keyTimes="0; 0.25; 0.5; 0.75; 1"
+                        dur="1s"
+                        fill="freeze"
+                        additive="sum"
+                        begin="balloonTranslate.end"
+                      />
+                      <animateTransform
+                        attributeName="transform"
+                        type="rotate"
+                        values="0 108 164; -20 108 164; 10 108 164; -5 108 164; -10 108 164"
+                        keySplines="0.42, 0.0, 0.58, 1.0; 0.42, 0.0, 0.58, 1.0; 0.42, 0.0, 0.58, 1.0; 0.42, 0.0, 0.58, 1.0;0.42, 0.0, 0.58, 1.0;"
+                        keyTimes="0; 0.25; 0.5; 0.75; 1"
+                        dur="1s"
+                        additive="sum"
+                        fill="freeze"
+                        begin="balloonRotate.end"
+                      />
                     </g>
-                    <line id="baloon-string" opacity="0" fill="none" stroke="#FFFFFF" stroke-width="2" stroke-linecap="round" stroke-miterlimit="10" x1="107.65" y1="166.71" x2="107.65" y2="289.02"/>
                     <g id="suitcase-bottom">
                       <path fill="#A67EE5" d="M280.29 318.62a5.72 5.72 0 1 0-5.12-5.69 5.43 5.43 0 0 0 5.12 5.69"/>
                       <ellipse fill="none" stroke="#FFFFFF" stroke-width="2" stroke-miterlimit="10" cx="280.29" cy="312.93" rx="5.12" ry="5.69"/>
@@ -1108,18 +1202,61 @@
                       </path>
                       <path id="bird-body" d="M 262.24 169.86 L 273 169.86 C 273.354 168.987 273.966 168.242 274.754 167.724 C 275.541 167.206 276.468 166.939 277.41 166.96 C 278.093 166.923 278.774 167.066 279.385 167.375 C 279.996 167.684 280.515 168.148 280.89 168.72 C 281.44 169.531 281.899 170.399 282.26 171.31 C 282.89 172.88 286.26 187.11 288.15 190.47 C 289.25 192.47 292.54 197.63 292.54 197.63 C 292.743 197.979 292.849 198.376 292.85 198.78 L 292.85 208 C 292.85 208 289.74 206.92 289.74 204.09 L 289.74 197.56 C 287.83 197.83 283.74 195.91 281.41 194.68 C 278.521 193.301 276.251 190.888 275.05 187.92 C 273.839 184.995 273.799 181.713 274.94 178.76 C 275.408 177.857 275.677 176.865 275.73 175.85 C 275.67 174.71 274.34 173.13 273.55 171.8 L 262.24 169.86 Z" transform="rotate(-20, 262, 169)"/>
                     </g>
-                    <g id="high-leaf" opacity="0">
+                    <g id="high-leaf">
                       <path fill="none" stroke="#3B7BF2" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" d="M141.77 204.16c24.1 32.45 35.81 84 35.81 84"/>
                       <path fill="#76ABFF" d="M125.73 196.22c6.54 7.51 17.16 9 17.16 9s0-10.72-6.53-18.22-17.17-9-17.17-9 0 10.72 6.54 18.22"/>
                       <path fill="#3B7BF2" d="M153.17 206.54c-2.69 9.58 1.91 19.27 1.91 19.27s9-5.86 11.67-15.45-1.91-19.27-1.91-19.27-9 5.86-11.67 15.45"/>
                       <path fill="#3B7BF2" d="M135.82 227.71c9.59 2.7 19.26-1.91 19.26-1.91s-5.86-9-15.45-11.67-19.26 1.87-19.26 1.87 5.87 9 15.45 11.67"/>
                       <path fill="#1553B7" d="M166.1 232.52c-3.41 9.36.47 19.35.47 19.35s9.39-5.18 12.79-14.53-.47-19.34-.47-19.34-9.39 5.18-12.79 14.53M147.22 252.35c9.36 3.4 19.35-.47 19.35-.47s-5.18-9.39-14.54-12.79-19.35.47-19.35.47 5.18 9.39 14.54 12.79"/>
+                      <animateTransform
+                        attributeName="transform"
+                        type="translate"
+                        values="0 4; 0 0"
+                        keySplines="0.42, 0.0, 0.58, 1.0; 0.42, 0.0, 0.58, 1.0;"
+                        keyTimes="0; 1"
+                        dur="1s"
+                        fill="freeze"
+                        begin="secondAppearance.begin"/>
+                      <animateTransform
+                        id="longBranchAppear"
+                        attributeName="transform"
+                        type="rotate"
+                        values="75 180 285; -10 180 285; 5 180 285; -3 180 285; 0 180 285;"
+                        keySplines="0.42, 0.0, 0.58, 1.0; 0.42, 0.0, 0.58, 1.0; 0.42, 0.0, 0.58, 1.0; 0.42, 0.0, 0.58, 1.0; 0.42, 0.0, 0.58, 1.0;"
+                        keyTimes="0; 0.3; 0.6; 0.8; 1"
+                        dur="1.5s"
+                        fill="freeze"
+                        additive="sum"
+                        begin="secondAppearance.begin"
+                      />
                     </g>
-                    <g id="low-leafs" opacity="0">
+                    <g id="low-leafs">
                       <path fill="#3B7BF2" d="M183.79 264.77c2.3 9.1-2.27 18.12-2.27 18.12s-8.32-5.74-10.63-14.85 2.27-18.12 2.27-18.12 8.32 5.75 10.63 14.85"/>
                       <path fill="#3B7BF2" d="M199.63 285.16c-9.11 2.31-18.12-2.27-18.12-2.27s5.74-8.32 14.85-10.63 18.12 2.27 18.12 2.27-5.75 8.32-14.85 10.63"/>
                       <path fill="none" stroke="#3B7BF2" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" d="M188.56 271.67a144.083 144.083 0 0 0-10.31 16.61"/>
                       <path fill="#76ABFF" d="M203.69 264.19c-6.17 7.08-16.19 8.44-16.19 8.44s0-10.11 6.16-17.18 16.19-8.45 16.19-8.45 0 10.11-6.16 17.19"/>
+                      <animateTransform
+                        attributeName="transform"
+                        type="translate"
+                        values="0 4; 0 0"
+                        keySplines="0.42, 0.0, 0.58, 1.0; 0.42, 0.0, 0.58, 1.0;"
+                        keyTimes="0; 1"
+                        dur="1s"
+                        fill="freeze"
+                        additive="sum"
+                        begin="secondAppearance.begin"
+                      />
+                      <animateTransform
+                        attributeName="transform"
+                        type="rotate"
+                        values="70 180 285; -10 180 285; 0 180 285; 5 180 285; 0 180 285;"
+                        keySplines="0.42, 0.0, 0.58, 1.0; 0.42, 0.0, 0.58, 1.0; 0.42, 0.0, 0.58, 1.0; 0.42, 0.0, 0.58, 1.0; 0.42, 0.0, 0.58, 1.0;"
+                        keyTimes="0; 0.3; 0.5; 0.8; 1"
+                        dur="1.5s"
+                        fill="freeze"
+                        additive="sum"
+                        begin="secondAppearance.begin"
+                      />
                     </g>
                     <line id="bottom-line" fill="none" stroke="#FFFFFF" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" x1="46.24" y1="329" x2="303.76" y2="329"/>
                   </g>
