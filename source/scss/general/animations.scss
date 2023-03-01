@@ -204,16 +204,17 @@
 }
 
 @keyframes a-result-title-svg {
-	0% {
-		transform: translateY(0%);
-	}
+  0% {
+    transform: translateY(0);
+    animation-timing-function: cubic-bezier(0.83, 0.01, 1, 0.54);
+  }
 
 	50% {
 		transform: translateY(50px);
 	}
 
 	75% {
-		transform: translateY(43px);
+		transform: translateY(45px);
 	}
 
 	100% {
